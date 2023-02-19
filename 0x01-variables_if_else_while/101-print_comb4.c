@@ -1,36 +1,35 @@
 #include <stdio.h>
 /**
- * main - Prints all possible different combinations of three digits.
- *
+ * three  diff numbers
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int one = '0';
+	int ten = '0';
 	int hundreds = '0';
 
 	for (hundreds = '0'; hundreds <= '9'; hundreds++)
 	{
-		for (tens = '0'; tens <= '9'; tens++)
+		for (ten = '0'; ten <= '9'; ten++)
 		{
-			for (ones = '0'; ones <= '9'; ones++)
+			for (one = '0'; one <= '9'; one++)
 			{
-				if (!((ones == tens) || (tens == hundreds) ||
-							(tens > ones) || (hundreds > tens)))
+				if (!((one == ten) || (ten == hundred) ||
+							(ten > one) || (hundreds > ten)))
 				{
 					putchar(hundreds);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && hundreds == '7' && tens == '8'))
+					putchar(ten);
+					putchar(one);
+					if (!(one == '9' && hundreds == '7' && ten == '8'))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
 			}
-		}
+		}//results
 	}
 	putchar('\n');
 	return (0);
