@@ -1,24 +1,19 @@
 #include <stdio.h>
-/**
- * main - Entry point
- *
- * Return: Always 0 (success)
- */
-
+/* inside main function */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
+	int one = '0';
+	int ten = '0';
 
-	for (tens = '0'; tens <= '9'; tens++)
+	for (ten = '0'; ten <= '9'; ten++)
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (one = '0'; one <= '9'; one++)
 		{
-			if (!((ones == tens) || (tens > ones)))
+			if (!((one == ten) || (ten > one)))
 			{
-				putchar(tens);
-				putchar(ones);
-				if (!(ones == '9' && tens == '8'))
+				putchar(ten);
+				putchar(one);
+				if (!(one == '9' && ten == '8'))
 				{
 					putchar(',');
 					putchar(' ');
@@ -26,6 +21,6 @@ int main(void)
 			}
 		}
 	}
-	putchar('\n');
+	putchar('\n');//display numbers
 	return (0);
 }

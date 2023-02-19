@@ -1,19 +1,18 @@
 #include <stdio.h>
 /**
- * main - Prints my alphabetical game
- *
- * Return: Always 0 (success)
+the alphabet in lowercase,followed by newline
  */
 int main(void)
 {
-	char c;
+	char a;
 
-	c = 'a';
+	a = 'b';
 	while
-		(c <= 'z') {
-			putchar(c);
-			c++;
-		}
+		(a <= 'z')
+	{putchar(a);
+	 a++;
+		
+	}
 	putchar('\n');
 	return (0);
 }
