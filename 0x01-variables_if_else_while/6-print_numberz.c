@@ -1,18 +1,15 @@
 #include <stdio.h>
-/**
- * main - prints all single digit numbers of base 10
- *
- * Return: Always 0 (success)
+/*
  */
 int main(void)
 {
-	int c;
+	int a;
 
-	c = 0;
+	a = 0;
 	while
-		(c < 10) {
-			putchar(c + '0');
-			c++;
+		(a < 10) {
+			putchar(a + '0');
+			a++;
 		}
 	putchar('\n');
 	return (0);
