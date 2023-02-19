@@ -1,16 +1,12 @@
 #include <stdio.h>
-/**
- * main - Prints all single digit numbers of base ten
- *
- * Return: Always 0 (success)
+/*c programme to Prints all single digit numbers of base ten
  */
-
 int main(void)
 {
-	int a;
+	int i;
 
-	for (a = 0; a < 10; a++)
-		printf("%d", a);
+	for (i = 0; i < 10; i++)
+		printf("%d", i);
 	putchar('\n');
-	return (0);
+	return 0;
 }
