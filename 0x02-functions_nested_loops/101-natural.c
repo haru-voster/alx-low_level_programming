@@ -1,3 +1,4 @@
+#include "main.h"
 /*
  * File: 101-natural.c
  * Auth: Joeph Akh
