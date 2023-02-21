@@ -1,5 +1,5 @@
 #include "main.h"
-/*c programm to output putchar*/
+/*c programm to output putchar
 /*return 0
 *when wrong output
 */
