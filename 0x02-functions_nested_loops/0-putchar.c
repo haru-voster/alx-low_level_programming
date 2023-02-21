@@ -1,8 +1,10 @@
 #include "main.h"
-/*c programm to output putchar
-/*return 0
-*when wrong output
-*/
+/**
+ * main - entry point
+ *
+ * Return: Always 0
+ */
+
 int main(void)
 {
 	_putchar('_');
