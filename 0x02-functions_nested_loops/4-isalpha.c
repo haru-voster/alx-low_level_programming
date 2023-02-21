@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - print alphabetic character
+ @c: letter to be checked]
  *Return: 1 if the letter is lowercase and uppercase otherwise 0
  */
 int _isalpha(int c)
