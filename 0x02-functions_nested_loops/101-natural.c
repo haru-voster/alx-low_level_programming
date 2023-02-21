@@ -1,6 +1,6 @@
 /*
  * File: 101-natural.c
- * haroun wabwire
+ * Auth :haroun wabwire
  */
 
 #include <stdio.h>
