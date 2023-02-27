@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_rev - print reverse characters.
  * @s: validate the character
