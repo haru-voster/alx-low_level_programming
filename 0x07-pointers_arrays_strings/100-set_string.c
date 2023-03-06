@@ -1,18 +1,13 @@
 #include "main.h"
-
+#include<stdio.h>
 /**
- * main - check the code
+ * set_string - redirect.
+ * @s: double pointer to address
+ * @to: the original pointer
  *
- * Return: Always 0.
+ * Return: chessboard.
  */
-
-void pointer ( char * point) {
-    point = "asd";
-}
-
-int main() {
-    char * point;
-    pointer(point);
-    printf("%s\n", point);
-    return 0;
+void set_string(char **s, char *to)
+{
+	*s = to;
 }
