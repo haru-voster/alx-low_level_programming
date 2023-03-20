@@ -1,10 +1,5 @@
-#ifndef SUM_H
-#define SUM_H
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
+#ifndef LIKEMACRO_H
+#define LIKEMACRO_H
 
 #define SUM(x, y) (x + y)
 
