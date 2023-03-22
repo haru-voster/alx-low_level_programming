@@ -2,7 +2,7 @@
 #include "function_pointers.h"
 
 /**
- * print_name - check the code for Holberton School students.
+ * print_name - check the code for ALX School students.
  * @name: name of a person.
  * @f: print name as is and UPPERCASE.
  * Return: Always 0.
