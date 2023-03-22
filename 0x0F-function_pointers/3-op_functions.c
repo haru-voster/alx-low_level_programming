@@ -1,56 +1,69 @@
+#include <stdio.h>
 #include "3-calc.h"
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
+#include <stdlib.h>
+
 /**
-*op_add - function that returns the sum 
-*@a: number 1
-*@b: number 2
-*Return: sum
-*/
+ * op_add - add two numbers
+ * @a: first number
+ * @b: second number
+ *
+ * Return: 0 if false, something else otherwise.
+ */
 int op_add(int a, int b)
 {
-return (a + b);
+	return (a + b);
 }
 /**
-*op_sub - function that returns subtraction
-*@a: number 1
-*@b: number 2
-*Return: subtraction
-*/
+ * op_sub - sub two numbers
+ * @a: first number
+ * @b: second number
+ *
+ * Return: 0 if false, something else otherwise.
+ */
 int op_sub(int a, int b)
 {
-return (a - b);
+	return (a - b);
 }
 /**
-*op_mul - function that returns multiplication
-*@a: number 1
-*@b: number 2
-*Return: multiplication
-*/
+ * op_mul - mul two numbers
+ * @a: first number
+ * @b: second number
+ *
+ * Return: a * b
+ */
 int op_mul(int a, int b)
 {
-return ( a * b);
+	return (a * b);
 }
 /**
-*op_div - function that returns division
-*@a: number 1
-*@b: number 2
-*Return: division
-*/
-int op_div(int a, int b);
+ * op_div - add two numbers
+ * @a: first number
+ * @b: second number
+ *
+ * Return: a / b.
+ */
+int op_div(int a, int b)
 {
-return (a / b);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a / b);
 }
 /**
-*op_mod - function that returns remainder
-*@a: number 1
-*@b: number 2
-*Return: remainder
-*/
+ * op_mod - add two numbers
+ * @a: first number
+ * @b: second number
+ *
+ * Return: a % b.
+ */
 int op_mod(int a, int b)
 {
-return (a % b);
-}
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
+}}
