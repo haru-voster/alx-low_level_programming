@@ -1,5 +1,5 @@
 #include "function_pointers.h"
-#include "3-calc.h"
+#include "calc.h"
 
 /**
 *op_add - function that returns the sum 
