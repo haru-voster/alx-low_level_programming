@@ -1,6 +1,7 @@
-#include "lists.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
+
 /**
  * free_list - Realease the memory allocated for a list
  *
