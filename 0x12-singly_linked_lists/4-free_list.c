@@ -1,17 +1,18 @@
 #include "lists.h"
 #include <stdlib.h>
-
-typedef struct list_s {
-    char *str;
-    struct list_s *next;
-} list_t;
-
-void free_list(list_t *head) {
-    while (head != NULL) {
-        list_t *current_node = head;
-        head = head->next;
-        free(current_node->str);
-        free(current_node);
-    }
+#include <stdio.h>
+/**
+ * free_list - Realease the memory allocated for a list
+ *
+ * @head: A pointer to the first node of the list to free
+ */
+void free_list(list_t *head)
+{
+	if (head)
+	{
+		free_list(head->next);
+		if (head->str)
+			free(head->str);
+		free(head);
+	}
 }
-
