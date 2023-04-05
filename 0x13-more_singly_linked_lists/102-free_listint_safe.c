@@ -10,7 +10,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	int i, flag = 0;
-	listint_t *slow, *fast, *delete;
+listint_t *slow, *fast, *delete,*free;
 
 	if (!h)
 		return (0);
