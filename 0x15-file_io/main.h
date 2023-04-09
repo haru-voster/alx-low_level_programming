@@ -1,10 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/**
- * @haroun
- *github.com/haru-voster
- */
 #include <stddef.h>
 #include <unistd.h>
 #include <fcntl.h>
