@@ -1,12 +1,8 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdli.h>
-#include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * copy_text_file - copies one file to the other (cp function)
+ * copy_text_file- copies one file to the other (cp function)
  * @f1: opened file_1 (file to copy)
  * @f2: opened file_2 (new copy)
  * @file_1: name of file one
