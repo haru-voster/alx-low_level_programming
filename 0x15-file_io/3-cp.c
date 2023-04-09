@@ -1,15 +1,16 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * copy_text_file- copies one file to the other (cp function)
- * @f1: opened file_1 (file to copy)
- * @f2: opened file_2 (new copy)
- * @file_1: name of file_1
- * @file_2: name of file_2
+ * copy_text_file - copies one file to the other (cp function)
+ * @f1: opened fil1 (file to copy)
+ * @f2: opened fil2 (new copy)
+ * @fil1: name of fil1
+ * @fil2: name of fil2
  */
 
-void copy_text_file(int f1, int f2, char *file_1, char *file_2)
+void copy_text_file(int f1, int f2, char *fil1, char *fil2)
 {
 	ssize_t lenRead = 1, lenWrite = 1;
 	char buffer[1024];
@@ -19,7 +20,7 @@ void copy_text_file(int f1, int f2, char *file_1, char *file_2)
 		lenRead = read(f1, buffer, sizeof(buffer));
 		if (lenRead == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from the file %s\n", file_1);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fil1);
 			close(f1);
 			close(f2);
 			exit(98);
@@ -29,7 +30,7 @@ void copy_text_file(int f1, int f2, char *file_1, char *file_2)
 		lenWrite = write(f2, buffer, lenRead);
 		if (lenWrite == -1 || lenWrite != lenRead)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_2);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fil2);
 			close(f1);
 			close(f2);
 			exit(99);
