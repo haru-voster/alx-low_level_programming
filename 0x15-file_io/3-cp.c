@@ -5,8 +5,8 @@
  * copy_text_file- copies one file to the other (cp function)
  * @f1: opened file_1 (file to copy)
  * @f2: opened file_2 (new copy)
- * @file_1: name of file one
- * @file_2: name of file two
+ * @file_1: name of file_1
+ * @file_2: name of file_2
  */
 
 void copy_text_file(int f1, int f2, char *file_1, char *file_2)
