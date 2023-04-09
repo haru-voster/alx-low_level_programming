@@ -8,14 +8,14 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int _file, len = 0, check = 0;
+	int file1, len = 0, check = 0;
 
 	if (!filename)
 		return (-1);
 
 	/* creates file or truncates a file, and give it permission -rw------ */
-	file = open(filename, O_RDWR | O_TRUNC | O_CREAT, 0600);
-	if (_file == -1)
+	file1 = open(filename, O_RDWR | O_TRUNC | O_CREAT, 0600);
+	if (file1 == -1)
 		return (-1);
 
 	/* if text, writes text into file */
@@ -23,10 +23,10 @@ int create_file(const char *filename, char *text_content)
 	{
 		for (len = 0; text_content[len]; len++)
 			;
-		check = write(_file, text_content, len);
+		check = write(file1, text_content, len);
 	}
 	/* closes file */
-	close(_file);
+	close(file1);
 	if (check != len)
 		return (-1);
 
