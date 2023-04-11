@@ -1,6 +1,6 @@
 /*
  * File: 0-read_textfile.c
- * Haroun wabwire
+ * Haroun mAGIO
  */
 
 #include "main.h"
@@ -17,7 +17,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t o, x, w;
+	ssize_t o, r, w;
 	char *buffer;
 
 	if (filename == NULL)
@@ -28,10 +28,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	o = open(filename, O_RDONLY);
-	x = read(o, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, x);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
 
-	if (o == -1 || x == -1 || w == -1 || w != x)
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
 		free(buffer);
 		return (0);
