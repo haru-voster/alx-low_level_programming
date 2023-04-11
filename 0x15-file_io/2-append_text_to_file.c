@@ -1,5 +1,8 @@
+/**
+ * File name: 2-append_text_to_file.c
+ * Author: Haroun wabwire
+ */
 #include "main.h"
-#include <stdio.h>
 /**
   * append_text_to_file - append to a file
   * @filename: the name of the file
