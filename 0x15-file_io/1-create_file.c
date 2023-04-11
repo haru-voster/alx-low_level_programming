@@ -1,34 +1,37 @@
-#include "main.h"
 /**
-  * create_file - creates a file or truncates it
-  * @filename: the name of the file to create
-  * @text_content: NULL terminated string to write to file
-  * Return: 1 on succes, -1 on failue
-  */
+ * haroun wabwir
+ */
+#include "main.h"
 
-int create_file(const char *filename, char *text_content)
+/**
+ * append_text_to_file - Appends text at the end of a file.
+ * @filename: A pointer to the name of the file.
+ * @text_content: The string to add to the end of the file.
+ *
+ * Return: If the function fails or filename is NULL - -1.
+ *         If the file does not exist the user lacks write permissions - -1.
+ *         Otherwise - 1.
+ */
+int append_text_to_file(const char *filename, char *text_content)
 {
-	int file1, len = 0, check = 0;
+	int o, w, len = 0;
 
-	if (!filename)
+	if (filename == NULL)
 		return (-1);
 
-	/* creates file or truncates a file, and give it permission -rw------ */
-	file1 = open(filename, O_RDWR | O_TRUNC | O_CREAT, 0600);
-	if (file1 == -1)
-		return (-1);
-
-	/* if text, writes text into file */
-	if (text_content)
+	if (text_content != NULL)
 	{
-		for (len = 0; text_content[len]; len++)
-			;
-		check = write(file1, text_content, len);
+		for (len = 0; text_content[len];)
+			len++;
 	}
-	/* closes file */
-	close(file1);
-	if (check != len)
+
+	o = open(filename, O_WRONLY | O_APPEND);
+	w = write(o, text_content, len);
+
+	if (o == -1 || w == -1)
 		return (-1);
+
+	close(o);
 
 	return (1);
 }
