@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
-  *haru-voster: author 
-  * print_binary - prints the binary rep of a number
-  * @n: unsigned long, number to be represented in binary
-  */
+ * print_binary - Prints binary
+ *
+ * @n: Unsigned int
+ *
+ * Return: Converted number
+ */
 
 void print_binary(unsigned long int n)
 {

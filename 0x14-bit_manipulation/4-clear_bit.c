@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
-  * haru-voster:author
   * clear_bit - sets the value of a bit to 0 given  an index
   * @n: unsigned long to change
   * @index: index to change to zero

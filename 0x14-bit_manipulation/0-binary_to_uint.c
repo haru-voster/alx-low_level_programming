@@ -1,13 +1,12 @@
 #include "main.h"
-
 /**
- * har-voster:author
  * binary_to_uint - Converts binary to unsigned int
  *
  * @b: Pointer to string of chars
  *
- * Return: Converted number or 0 if it fails
+ * Return: Converted number
  */
+
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int uint, stat;

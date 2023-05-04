@@ -1,12 +1,14 @@
 #include "main.h"
 
 /**
-  * haru-voster:author
-  * set_bit - sets the value of a bit to 1
-  * @n: unsigned long to change
-  * @index: index to change to oneven an index
-  * Return: 1 if it worked or -1
-  */
+ * set_bit - Sets value of bit to 1
+ *
+ * @n: long int
+ *
+ * @index: unsigned int
+ *
+ * Return: 1 if works -1 on failure
+ */
 
 int set_bit(unsigned long int *n, unsigned int index)
 {

@@ -2,7 +2,6 @@
 #include "main.h"
 
 /**
- * haru-voster: author
  * flip_bits - Write a function that returns the number of bits you would
  * Prototype: unsigned int flip_bits(unsigned long int n, unsigned long int m);
  * You are not allowed to use the % or / operators
