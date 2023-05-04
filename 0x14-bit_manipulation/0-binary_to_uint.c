@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * haru-voster author 
+  * haru-voster author
   * binary_to_uint - converts a binary number to an unsigned int
   * @b: binary number
   * Return:converted number or 0 if it fails
