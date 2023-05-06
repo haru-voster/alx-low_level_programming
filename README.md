@@ -1,2 +1,2 @@
 FULL_STACK (SOFTWARE ENGINEER)
-THINK TWICW CODE ONCE - I first solve a problem and write a code
+THINK TWICE CODE ONCE - I first solve a problem and write a code
