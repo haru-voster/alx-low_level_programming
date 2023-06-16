@@ -1,42 +1,23 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * create_node - creates a new DLL node with data
- * @n: data to add to node
- *
- * Return: pointer to newly allocated/populated node
- */
-dlistint_t *create_node(const int n)
-{
-	dlistint_t *new_node = NULL;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
-		return (NULL);
-
-	new_node->next = NULL;
-	new_node->prev = NULL;
-	new_node->n = n;
-
-	return (new_node);
-}
-
-/**
- * add_dnodeint - adds a node to the head of a doubly linked list
- * @head: double pointer to the head, so we can modify if needed
- * @n: data to add to new node
- *
- * Return: pointer to new element, NULL on failure.
+ * add_dnodeint - add node at beginning of the list
+ * @head: double ptr to the head of the list
+ * @n:data
+ * Return: next pointer
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new_node = NULL, *temp = NULL;
+	dlistint_t *next;
 
-	new_node = create_node(n);
-	if (!new_node)
+	if (head == NULL)
+		return (NULL);
+	next = malloc(sizeof(dlistint_t));
+
+	if (next == NULL)
 		return (NULL);
 
+<<<<<<< HEAD
 	if (!head || !(*head))
 	{
 		*head = new_node;
@@ -50,6 +31,14 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		new_node->next = temp;
 		return (new_node);
 	}
+=======
+	next->n = n;
+	next->next = *head;
+	next->prev = NULL;
+>>>>>>> d01017ae46aa4b7214c8f73b3562c2b99fc0b573
 
-	return (NULL);
+	if (*head != NULL)
+		(*head)->prev = next;
+	*head = next;
+	return (next);
 }

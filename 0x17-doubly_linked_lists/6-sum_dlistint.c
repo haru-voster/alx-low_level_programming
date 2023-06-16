@@ -1,20 +1,15 @@
 #include "lists.h"
 
 /**
- * sum_dlistint - sums of all data in doubly linked list
- * @head: pointer to head of DLL
- *
- * Return: sum of all elements of the DLL, 
- * 0 if DLL is NULL
+ * sum_dlistint - add all elements of a list
+ * @head: ptr to the beginning of the list
+ * Return: sum of the elements
  */
 int sum_dlistint(dlistint_t *head)
 {
-	int sum = 0;
+	int sum;
 
-	while (head)
-	{
-		sum += head->n;
-		head = head->next;
-	}
+	for (sum = 0; head != NULL; head = head->next)
+		sum = sum + head->n;
 	return (sum);
 }
