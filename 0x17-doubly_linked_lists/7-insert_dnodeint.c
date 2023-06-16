@@ -1,75 +1,44 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * create_dnode - creates a new DLL node with data
- * @n: data to add to node
- *
- * Return: pointer to newly allocated/populated node
- */
-dlistint_t *create_dnode(const int n)
-{
-	dlistint_t *new_node = NULL;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
-		return (NULL);
-
-	new_node->next = NULL;
-	new_node->prev = NULL;
-	new_node->n = n;
-
-	return (new_node);
-}
-
-/**
- * insert_dnodeint_at_index - inserts a node at position
- * in a doubly linked list
- * @h: double pointer to the head, so we can modify if needed
- * @idx: index to insert new node at
- * @n: data to add to new node
- *
- * Return: pointer to new element, NULL on failure.
+ * insert_dnodeint_at_index - func to insert node at index
+ * @h: double ptr to the beginning of the list
+ * @idx: index at which to add
+ * @n: data to be added
+ * Return: address of the new node or NULL
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node = NULL, *temp = NULL;
-	unsigned int i = 0;
+	dlistint_t *new, *old;
+	unsigned int b;
 
-	new_node = create_dnode(n);
-	if (!new_node)
+	if (h == NULL)
 		return (NULL);
-	if (!h || !(*h)) /* NULL DLL */
-		*h = new_node;
-	else /* DLL exists */
+
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+
+	old = *h;
+
+	for (b = 0; old != NULL && b < idx; b++)
+		old = old->next;
+
+	if (old == NULL && b == idx)
+		return (add_dnodeint_end(h, n));
+
+	else if (old != NULL)
 	{
-		temp = *h;
-		/* advance to pos of idx in DLL */
-		while (idx != i++ && temp->next)
-			temp = temp->next;
-		if (temp->next)
-			new_node->prev = temp->prev;
-		else
-			new_node->prev = temp;
-		if (idx == i) 
-		{
-			temp->next = new_node;
-			new_node->prev = temp;
-		}
-		else if (idx == i - 1) /* insert at head or middle */
-		{
-			if (temp->prev)
-				temp->prev->next = new_node;
-			else /* head of LL */
-				*h = new_node;
-			temp->prev = new_node;
-			new_node->next = temp;
-		}
-		else /*  range */
-		{
-			free(new_node);
+		new = malloc(sizeof(dlistint_t));
+
+		if (new == NULL)
 			return (NULL);
-		}
+		new->n = n;
+		old->prev->next = new;
+		new->prev = old->prev;
+		old->prev = new;
+		new->next = old;
+
+		return (new);
 	}
-	return (new_node);
+	return (NULL);
 }
