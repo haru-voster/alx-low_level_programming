@@ -1,3 +1,7 @@
+/**
+ * basic c operations (arithmetics)
+ * haru-voster
+ */
 int add(int a, int b)
 {
     return a + b;
