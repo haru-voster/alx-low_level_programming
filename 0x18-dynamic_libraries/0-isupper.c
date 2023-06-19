@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _isupper - prints if the characters are lowercase or not
  * 0 for lowercase 1 for uppercase
