@@ -12,9 +12,9 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 	printf("{");
-	for (h = 0; h < ht->size; h++)
+	for (b = 0; b < ht->size; b++)
 	{
-		if (ht->array[h] != NULL)
+		if (ht->array[b] != NULL)
 		{
 			node = ht->array[b];
 			while (node != NULL)
