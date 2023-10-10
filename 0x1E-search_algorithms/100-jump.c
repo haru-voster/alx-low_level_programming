@@ -3,39 +3,39 @@
 
 /**
  * jump_search - searches for a value in an array of
- * integers using the Jump 
+ * integers using the Jump search algorithm
  *
  * @array: input array
  * @size: size of the array
  * @value: value to search in
- * Return: idx of the number
+ * Return: index of the number
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int idx, m, l, prev;
+	int index, m, l, prev;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
 	m = (int)sqrt((double)size);
 	l = 0;
-	prev = idx = 0;
+	prev = index = 0;
 
 	do {
-		printf("Value checled array[%d] = [%d]\n", idx, array[idx]);
+		printf("Value checked array[%d] = [%d]\n", index, array[index]);
 
-		if (array[idx] == value)
-			return (idx);
+		if (array[index] == value)
+			return (index);
 		l++;
-		prev = idx;
-		idx = l * m;
-	} while (idx < (int)size && array[idx] < value);
+		prev = index;
+		index = l * m;
+	} while (index < (int)size && array[index] < value);
 
-	printf("Value found between idxes [%d] and [%d]\n", prev, idx);
+	printf("Value found between indexes [%d] and [%d]\n", prev, index);
 
-	for (; prev <= idx && prev < (int)size; prev++)
+	for (; prev <= index && prev < (int)size; prev++)
 	{
-		printf("Value checled array[%d] = [%d]\n", prev, array[prev]);
+		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		if (array[prev] == value)
 			return (prev);
 	}
