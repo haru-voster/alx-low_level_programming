@@ -1,4 +1,4 @@
- #include "search_algos.h"
+#include "search_algos.h"
 #include <math.h>
 
 /**
@@ -8,32 +8,32 @@
  * @array: input array
  * @size: size of the array
  * @value: value to search in
- * Return: index of the number
+ * Return: idx of the number
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int index, m, l, prev;
+	int idx, m, l, prev;
 
 	if (array == NULL || size == 0)
 		return (-1);
 
 	m = (int)sqrt((double)size);
 	l = 0;
-	prev = index = 0;
+	prev = idx = 0;
 
 	do {
-		printf("Value checled array[%d] = [%d]\n", index, array[index]);
+		printf("Value checled array[%d] = [%d]\n", idx, array[idx]);
 
-		if (array[index] == value)
-			return (index);
+		if (array[idx] == value)
+			return (idx);
 		l++;
-		prev = index;
-		index = l * m;
-	} while (index < (int)size && array[index] < value);
+		prev = idx;
+		idx = l * m;
+	} while (idx < (int)size && array[idx] < value);
 
-	printf("Value found between indexes [%d] and [%d]\n", prev, index);
+	printf("Value found between idxes [%d] and [%d]\n", prev, idx);
 
-	for (; prev <= index && prev < (int)size; prev++)
+	for (; prev <= idx && prev < (int)size; prev++)
 	{
 		printf("Value checled array[%d] = [%d]\n", prev, array[prev]);
 		if (array[prev] == value)
@@ -42,4 +42,3 @@ int jump_search(int *array, size_t size, int value)
 
 	return (-1);
 }
-
